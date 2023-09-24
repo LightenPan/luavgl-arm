@@ -7,8 +7,8 @@ option(USE_LUAJIT "Use luajit instead of lua" OFF)
 
 if (BUILD_SIMULATOR)
     add_compile_options(-g -O0)
-    add_compile_options(-fsanitize=address)
-    add_link_options(-fsanitize=address)
+    # add_compile_options(-fsanitize=address)
+    # add_link_options(-fsanitize=address)
 endif(BUILD_SIMULATOR)
 
 add_library(luavgl STATIC "src/luavgl.c")
